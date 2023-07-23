@@ -79,3 +79,65 @@ PS D:\Home_Works\CS_HW_4> dotnet run
 Сумма цифр в числе = 12
 */
 
+/* Задача 3: Напишите программу, которая задаёт массив из m элементов и выводит их на экран. Разработать метод CreateArray(int size), генерирующий массив на основе данных, 
+вводимых пользователем.
+1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+6, 1, 33 -> [6, 1, 33]
+*/
+
+/* Решение 3
+int InputNum(string message)
+{
+    
+    Console.Write(message + " ");
+    return Convert.ToInt32(Console.ReadLine());
+
+}
+
+int[] CreateArray(int Length)
+{
+
+    int [] array = new int[Length];
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = InputNum("Введите " + i + " элемент массива");
+    }
+
+    return array;
+
+}
+
+void PrintArray(int[] array)
+{
+    Console.Write("[");
+
+    for(int i=0; i < array.Length-1; i++)
+    {
+       Console.Write(array[i] + ","); 
+    }
+
+    Console.Write(array[array.Length-1] + "]");
+}
+
+int Length = InputNum("Введите длину массива ");
+int[] array = CreateArray(Length);
+PrintArray(array);
+*/
+
+/* Тест 3 
+PS D:\Home_Works\CS_HW_4> dotnet run
+Введите длину массива  5
+Введите 0 элемент массива 1
+Введите 1 элемент массива 2
+Введите 2 элемент массива 5
+Введите 3 элемент массива 7
+Введите 4 элемент массива 19
+[1,2,5,7,19]
+PS D:\Home_Works\CS_HW_4> dotnet run
+Введите длину массива  3
+Введите 0 элемент массива 6
+Введите 1 элемент массива 1
+Введите 2 элемент массива 33
+[6,1,33]
+*/
