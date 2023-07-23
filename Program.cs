@@ -33,3 +33,49 @@ PS D:\Home_Works\CS_HW_4> dotnet run
 Введите степень (В) в которую нужно возвести число:  4
 Число А в Степение В равно: 16
 */
+
+/* Задача 2: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+452 -> 11
+82 -> 10
+9012 -> 12
+*/
+
+/* Решение 2
+int InputNum(string message)
+{
+    
+    Console.Write(message + " ");
+    return Convert.ToInt32(Console.ReadLine());
+
+}
+
+int SumOfNumbers (int Number)
+{
+
+    int result = 0;
+    while (Number > 0)
+    {
+        result += Number % 10;
+        Number = Number/10;
+    }
+
+    return result;
+
+}
+
+int Number = InputNum("Введите ваше число: ");
+Console.Write("Сумма цифр в числе = " + SumOfNumbers(Number));
+*/
+
+/* Тест 2 
+PS D:\Home_Works\CS_HW_4> dotnet run
+Введите ваше число:  452
+Сумма цифр в числе = 11
+PS D:\Home_Works\CS_HW_4> dotnet run
+Введите ваше число:  82
+Сумма цифр в числе = 10
+PS D:\Home_Works\CS_HW_4> dotnet run
+Введите ваше число:  9012
+Сумма цифр в числе = 12
+*/
+
